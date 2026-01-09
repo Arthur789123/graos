@@ -7,8 +7,13 @@ async function getProdutos() {
     res.forEach(element => {
         resultados.innerHTML += `
         <div class="card">
-            <p>${element.produto_id} ${element.nome}</p>
-            <p>${element.validade}</p>
+            <img class="img" src="${element.thumbnail}">
+            <h2 class="h2">${element.nome}</h2>
+            <p>Data de validade: ${element.validade.slice(0, 10)}</p>
+            <div>
+                 <p class="preco">R$ ${element.preco}</p>
+            </div>  
+            <button class="button">Adicionar ao carrinho</button>
         </div>
         `
     });

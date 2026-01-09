@@ -10,7 +10,8 @@ CREATE TABLE produtos (
     peso DECIMAL(7,2),
     marca VARCHAR(50),
     preco DECIMAL(7,2),
-    tipo VARCHAR(40)
+    tipo VARCHAR(40),
+    thumbnail VARCHAR(500)
 );
    
 CREATE TABLE funcionarios (
@@ -55,12 +56,12 @@ VALUES
 ('Sofia Martins', '789.456.123-66', 'sofia.martins@example.com', '(11) 91234-5678', 'Vila Nova', 'São Paulo', 'SP', 'F', '1994-01-05');
 
 
-INSERT INTO produtos (nome, tipo, validade, peso, unidade, marca, preco)
+INSERT INTO produtos (nome, tipo, validade, peso, unidade, marca, preco, thumbnail)
 VALUES
-('Soja', 'Soja', '2025-12-10', 90.00, 'g', 'Embrapa', 12.90),
-('Café', 'Café', '2026-03-25', 250.00, 'g', 'Melitta', 39.90),
-('Feijão', 'Feijão', '2026-02-14', 150.00, 'g', 'Camil', 25.90),
-('Arroz', 'Arroz', '2025-11-30', 100.00, 'g', 'Tio João', 18.50);
+('Proteina de Soja 400g', 'Soja', '2025-12-10', 400.00, 'g', 'Camil', 8.64, "https://www.sondadelivery.com.br/img.aspx/sku/1415476/530/1415476.jpg"),
+('Café Mellita 500g', 'Café', '2026-03-25', 500.00, 'g', 'Melitta', 41.99, "https://phygital-files.mercafacil.com/catalogo/uploads/produto/caf_torrado_e_mo_do_melitta_sabor_da_fazenda_pacote_500g_2ded1063-a8bb-4610-8f5b-2cd2c9639b50.png"),
+('Feijão tipo 1 1kg', 'Feijão', '2026-02-14', 1, 'kg', 'Coop', 5.99, "https://coopsp.vtexassets.com/arquivos/ids/238069-1200-1200?v=638460297180470000&width=1200&height=1200&aspect=true"),
+('Arroz tipo 1 1kg', 'Arroz', '2025-11-30', 1, 'kg', 'Tio João', 6.59, "https://coopsp.vtexassets.com/arquivos/ids/216318-800-auto?v=637919532812830000&width=800&height=auto&aspect=true");
 
 
 INSERT INTO funcionarios (nome, telefone, cargo, e_mail, senha, genero, data_nascimento, cpf)
